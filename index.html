@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molino de Nieve — Raspados Artesanales</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav id="navbar">
+      <a class="nav-logo" href="#">
+        <div class="nav-logo-icon">❄</div>
+        <div class="nav-logo-text">Molino<br /><span>de Nieve</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#features">Nosotros</a></li>
+        <li><a href="#story">Historia</a></li>
+        <li><a href="#contacto" class="nav-cta">Ordenar ahora</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ── MOBILE MENU ── -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="#menu" class="menu-link">Menú</a>
+      <a href="#features" class="menu-link">Nosotros</a>
+      <a href="#story" class="menu-link">Historia</a>
+      <a href="#contacto" class="menu-link">Ordenar ahora</a>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">❄ Raspados artesanales desde 1998</div>
+        <h1 class="hero-title">
+          La nieve<br /><em>más fresca</em><br />de la ciudad
+        </h1>
+        <p class="hero-sub">
+          Hechos con hielo puro, frutas naturales y recetas que han pasado de
+          generación en generación. En Molino de Nieve cada bocado es una
+          experiencia única.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn-primary">🍧 Ordenar ahora</a>
+          <a href="#story" class="btn-ghost">Conoce nuestra historia →</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg
+          viewBox="0 0 280 380"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M60 200 L80 360 L200 360 L220 200 Z"
+            fill="rgba(255,255,255,0.15)"
+            stroke="rgba(255,255,255,0.4)"
+            stroke-width="2"
+          />
+          <ellipse
+            cx="140"
+            cy="200"
+            rx="82"
+            ry="24"
+            fill="rgba(255,255,255,0.9)"
+          />
+          <path
+            d="M58 200 Q80 140 110 110 Q130 90 140 70 Q150 90 170 110 Q200 140 222 200 Z"
+            fill="rgba(255,255,255,0.95)"
+          />
+          <path
+            d="M110 120 Q105 150 100 180"
+            stroke="#f25f5c"
+            stroke-width="4"
+            stroke-linecap="round"
+            opacity=".7"
+          />
+          <path
+            d="M140 90 Q145 130 148 170"
+            stroke="#4eb3e8"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            opacity=".7"
+          />
+          <path
+            d="M168 115 Q172 148 175 180"
+            stroke="#f9c74f"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            opacity=".7"
+          />
+          <rect
+            x="148"
+            y="60"
+            width="8"
+            height="180"
+            rx="4"
+            fill="rgba(255,255,255,0.6)"
+          />
+          <text
+            x="30"
+            y="120"
+            font-size="18"
+            fill="rgba(255,255,255,0.5)"
+            font-family="sans-serif"
+          >
+            ❄
+          </text>
+          <text
+            x="230"
+            y="150"
+            font-size="14"
+            fill="rgba(255,255,255,0.4)"
+            font-family="sans-serif"
+          >
+            ❄
+          </text>
+          <text
+            x="50"
+            y="300"
+            font-size="12"
+            fill="rgba(255,255,255,0.3)"
+            font-family="sans-serif"
+          >
+            ❄
+          </text>
+          <text
+            x="215"
+            y="280"
+            font-size="10"
+            fill="rgba(255,255,255,0.3)"
+            font-family="sans-serif"
+          >
+            ❄
+          </text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── MENÚ ── -->
+    <section id="menu">
+      <div class="menu-header reveal">
+        <div class="section-label">Lo que tenemos para ti</div>
+        <h2 class="section-title">Nuestro Menú</h2>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-cat="todos">🍽️ Todos</button>
+        <button class="tab-btn" data-cat="nieves">❄️ Nieves</button>
+        <button class="tab-btn" data-cat="elotes">🌽 Elotes</button>
+        <button class="tab-btn" data-cat="fresas">🍓 Fresas</button>
+        <button class="tab-btn" data-cat="paletas">🍡 Paletas & Bolis</button>
+        <button class="tab-btn" data-cat="dorinachos">🌮 Dorinachos</button>
+        <button class="tab-btn" data-cat="cocteles">🍹 Cocteles</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- ── NOSOTROS (features) ── -->
+    <section id="features">
+      <div class="section-label">Por qué elegirnos</div>
+      <h2 class="section-title reveal">
+        Más que una nieve,<br />felicidad en cada cucharada
+      </h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <span class="feature-icon">🌿</span>
+          <div class="feature-title">100% Natural</div>
+          <p class="feature-desc">
+            Usamos solo frutas frescas de temporada y colorantes naturales. Sin
+            conservadores ni sabores artificiales.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🏔️</span>
+          <div class="feature-title">Hielo Puro</div>
+          <p class="feature-desc">
+            Nuestro hielo se tritura en el momento para lograr esa textura suave
+            y esponjosa que nos distingue.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🎨</span>
+          <div class="feature-title">+15 Sabores</div>
+          <p class="feature-desc">
+            Desde clásicos como tamarindo y chamoyada hasta combinaciones
+            gourmet exclusivas de temporada.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🚴</span>
+          <div class="feature-title">Entrega a domicilio</div>
+          <p class="feature-desc">
+            Llevamos la frescura hasta tu puerta. Pedidos disponibles de lunes a
+            domingo de 3:00pm a 10:00pm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HISTORIA ── -->
+    <section id="story">
+      <div class="story-inner">
+        <div class="story-image-wrap reveal">
+          <div class="story-img-bg">
+            <svg
+              viewBox="0 0 240 300"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40 130 Q70 70 120 30 Q170 70 200 130 Z"
+                fill="rgba(255,255,255,0.9)"
+              />
+              <ellipse
+                cx="120"
+                cy="130"
+                rx="80"
+                ry="22"
+                fill="rgba(255,255,255,0.95)"
+              />
+              <path
+                d="M90 55 Q86 90 82 125"
+                stroke="#f25f5c"
+                stroke-width="5"
+                stroke-linecap="round"
+                opacity=".8"
+              />
+              <path
+                d="M120 35 Q124 75 127 118"
+                stroke="#f9c74f"
+                stroke-width="4"
+                stroke-linecap="round"
+                opacity=".8"
+              />
+              <path
+                d="M148 55 Q153 90 156 122"
+                stroke="#4eb3e8"
+                stroke-width="4.5"
+                stroke-linecap="round"
+                opacity=".75"
+              />
+              <path
+                d="M42 130 L65 270 L175 270 L198 130 Z"
+                fill="rgba(255,255,255,0.18)"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="2"
+              />
+              <text
+                x="12"
+                y="80"
+                font-size="22"
+                fill="rgba(255,255,255,0.6)"
+                font-family="sans-serif"
+              >
+                ✦
+              </text>
+              <text
+                x="208"
+                y="100"
+                font-size="16"
+                fill="rgba(255,255,255,0.45)"
+                font-family="sans-serif"
+              >
+                ✦
+              </text>
+              <text
+                x="20"
+                y="220"
+                font-size="14"
+                fill="rgba(255,255,255,0.35)"
+                font-family="sans-serif"
+              >
+                ✦
+              </text>
+            </svg>
+          </div>
+          <div class="story-badge-float">
+            <strong>25+</strong>
+            <span>Años de frescura</span>
+          </div>
+        </div>
+
+        <div class="story-text reveal">
+          <div class="section-label">Nuestra historia</div>
+          <h2 class="section-title">Nacimos de una<br />pasión familiar</h2>
+          <p>
+            Todo comenzó en 1998 cuando la abuela Rosa preparó su primer raspado
+            usando la receta de su madre. Lo que empezó como un negocio de
+            barrio se convirtió en el lugar favorito de toda la ciudad.
+          </p>
+          <p>
+            Hoy, tres generaciones después, seguimos usando los mismos
+            ingredientes y el mismo amor que pusimos en ese primer raspado.
+          </p>
+          <ul class="story-list">
+            <li>Fruta fresca seleccionada cada mañana</li>
+            <li>Recetas originales transmitidas de generación en generación</li>
+            <li>Ingredientes 100% locales y de temporada</li>
+            <li>Sin conservadores ni saborizantes artificiales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PEDIDO / DELIVERY ── -->
+    <section id="contacto">
+      <div class="delivery-inner">
+        <!-- Encabezado -->
+        <div class="delivery-header reveal">
+          <div class="section-label">Pide desde donde estés</div>
+          <h2 class="section-title">Antojo a un clic<br />de distancia ❄️</h2>
+          <p class="contact-sub">
+            Encuentra nuestro local en tus apps favoritas de delivery y recibe
+            tu pedido fresquecito en la puerta de tu casa.
+          </p>
+        </div>
+
+        <!-- Info rápida -->
+        <div class="delivery-stats reveal">
+          <div class="dstat">
+            <span class="dstat-icon">⏱️</span>
+            <strong>20–35 min</strong>
+            <span>Tiempo estimado</span>
+          </div>
+          <div class="dstat-divider"></div>
+          <div class="dstat">
+            <span class="dstat-icon">⭐</span>
+            <strong>4.9 / 5</strong>
+            <span>Calificación</span>
+          </div>
+          <div class="dstat-divider"></div>
+          <div class="dstat">
+            <span class="dstat-icon">🕙</span>
+            <strong>10am – 8pm</strong>
+            <span>Lun – Dom</span>
+          </div>
+        </div>
+
+        <!-- Botones de apps -->
+        <div class="delivery-apps reveal">
+          <!-- DiDi Food -->
+          <a href="#" class="app-card didi">
+            <div class="app-logo">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="12" fill="#FF6522" />
+                <text
+                  x="50%"
+                  y="55%"
+                  font-size="22"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-family="sans-serif"
+                  font-weight="bold"
+                  fill="white"
+                >
+                  D
+                </text>
+              </svg>
+            </div>
+            <div class="app-info">
+              <span class="app-sub">Pedir en</span>
+              <span class="app-name">DiDi Food</span>
+              <span class="app-tag">Disponible ahora</span>
+            </div>
+            <div class="app-arrow">→</div>
+          </a>
+
+          <!-- Uber Eats -->
+          <a href="#" class="app-card uber">
+            <div class="app-logo">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="12" fill="#06C167" />
+                <text
+                  x="50%"
+                  y="55%"
+                  font-size="16"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-family="sans-serif"
+                  font-weight="bold"
+                  fill="white"
+                >
+                  UE
+                </text>
+              </svg>
+            </div>
+            <div class="app-info">
+              <span class="app-sub">Pedir en</span>
+              <span class="app-name">Uber Eats</span>
+              <span class="app-tag">Disponible ahora</span>
+            </div>
+            <div class="app-arrow">→</div>
+          </a>
+
+          <!-- WhatsApp directo -->
+          <a
+            href="https://wa.me/526140000000?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Molino%20de%20Nieve%20🍧"
+            target="_blank"
+            class="app-card whatsapp"
+          >
+            <div class="app-logo">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="12" fill="#25D366" />
+                <path
+                  d="M24 11C16.82 11 11 16.82 11 24c0 2.56.73 4.95 2 6.99L11 37l6.19-1.97A13 13 0 0024 37c7.18 0 13-5.82 13-13S31.18 11 24 11z"
+                  fill="#fff"
+                />
+                <path
+                  d="M24 13.5c-5.79 0-10.5 4.71-10.5 10.5 0 2.17.66 4.19 1.8 5.87l-1.18 4.3 4.43-1.15A10.46 10.46 0 0024 34.5c5.79 0 10.5-4.71 10.5-10.5S29.79 13.5 24 13.5z"
+                  fill="#25D366"
+                />
+                <path
+                  d="M20.5 18c-.3-.68-.62-.69-.9-.7H18.7c-.28 0-.72.1-1.1.52-.37.41-1.42 1.38-1.42 3.37s1.45 3.91 1.65 4.18c.2.27 2.82 4.52 6.93 6.15 3.43 1.35 4.12 1.08 4.87 1.01.74-.07 2.39-.98 2.73-1.92.34-.95.34-1.76.24-1.93-.1-.17-.37-.27-.78-.47-.41-.2-2.41-1.19-2.79-1.32-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.88.1-.41-.2-1.73-.64-3.3-2.03-1.22-1.08-2.04-2.42-2.28-2.83-.24-.4-.03-.62.18-.82.18-.18.41-.47.61-.7.2-.24.27-.4.4-.68.14-.27.07-.51-.03-.71-.1-.2-.88-2.2-1.25-3.01z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+            <div class="app-info">
+              <span class="app-sub">Pedir por</span>
+              <span class="app-name">WhatsApp</span>
+              <span class="app-tag">Respuesta inmediata</span>
+            </div>
+            <div class="app-arrow">→</div>
+          </a>
+        </div>
+
+        <!-- Aviso pequeño -->
+        <p class="delivery-note reveal">
+          🏪 También puedes visitarnos en local ·
+          <strong>C. 16 de septiembre 648, Chihuahua</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <p>
+        © 2025 <span>Molino de Nieve</span> — Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
