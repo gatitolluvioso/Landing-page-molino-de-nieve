@@ -684,9 +684,9 @@ section {
   border-color: #06c167;
   box-shadow: 0 12px 32px rgba(6, 193, 103, 0.25);
 }
-.app-card.whatsapp:hover {
-  border-color: #25d366;
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.25);
+.app-card.maps:hover {
+  border-color: #4285f4;
+  box-shadow: 0 12px 32px rgba(66, 133, 244, 0.25);
 }
 
 .app-logo svg {
@@ -728,9 +728,9 @@ section {
   color: #ff6522;
   background: rgba(255, 101, 34, 0.12);
 }
-.app-card.whatsapp .app-tag {
-  color: #25d366;
-  background: rgba(37, 211, 102, 0.12);
+.app-card.maps .app-tag {
+  color: #4285f4;
+  background: rgba(66, 133, 244, 0.12);
 }
 
 .app-arrow {
